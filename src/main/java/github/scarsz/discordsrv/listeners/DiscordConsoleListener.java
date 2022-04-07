@@ -82,9 +82,31 @@ public class DiscordConsoleListener extends ListenerAdapter {
 
         for (int i = 0; i < blacklistedCommands.size(); i++) blacklistedCommands.set(i, blacklistedCommands.get(i).toLowerCase());
 
-        String requestedCommand = event.getMessage().getContentRaw().trim().split(" ")[0].toLowerCase();
+        // JHarris changes. The requestedCommand has been changed from only the first word, to the entire command.
+        // After, instead of checking if the blacklist contains the command. We loop through the blacklisted commands
+        // and check if the requestedCommand starts with any of the blacklisted commnads
+
+        /*String requestedCommand = event.getMessage().getContentRaw().trim().split(" ")[0].toLowerCase();
         requestedCommand = requestedCommand.substring(requestedCommand.lastIndexOf(":") + 1);
-        if (isWhitelist != blacklistedCommands.contains(requestedCommand)) return;
+        if (isWhitelist != blacklistedCommands.contains(requestedCommand)) return;*/
+
+        String requestedCommand = event.getMessage().getContentRaw().toLowerCase();
+        boolean doCommand = false;
+
+        for (String blacklistedCommand : blacklistedCommands) {
+            if (isWhitelist) {
+                if (requestedCommand.startsWith(blacklistedCommand)) {
+                    doCommand = true;
+                    break;
+                }
+                continue;
+
+            } else {
+                if (requestedCommand.startsWith(blacklistedCommand)) return;
+            }
+        }
+
+        if (!doCommand) return;
 
         // log command to console log file, if this fails the command is not executed for safety reasons unless this is turned off
         File logFile = DiscordSRV.getPlugin().getLogFile();

@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.discordsrv</groupId>
     <artifactId>discordsrv</artifactId>
-    <version>1.25.1</version>
+    <version>1.25.1-JHFork</version>
 
     <name>DiscordSRV</name>
     <url>https://www.spigotmc.org/resources/discordsrv.18494/</url>
@@ -58,7 +58,7 @@
 
     <build>
         <!--suppress UnresolvedMavenProperty -->
-        <finalName>${project.name}-Build-${project.version}-${git.commit.id.abbrev}</finalName>
+        <finalName>${project.name}-Build-${project.version}</finalName>
         <defaultGoal>clean package</defaultGoal>
         <resources>
             <resource>
