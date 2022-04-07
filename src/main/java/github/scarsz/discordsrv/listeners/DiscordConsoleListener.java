@@ -84,7 +84,7 @@ public class DiscordConsoleListener extends ListenerAdapter {
 
         // JHarris changes. The requestedCommand has been changed from only the first word, to the entire command.
         // After, instead of checking if the blacklist contains the command. We loop through the blacklisted commands
-        // and check if the requestedCommand starts with any of the blacklisted commnads
+        // and check if the requestedCommand starts with any of the blacklisted commands
 
         /*String requestedCommand = event.getMessage().getContentRaw().trim().split(" ")[0].toLowerCase();
         requestedCommand = requestedCommand.substring(requestedCommand.lastIndexOf(":") + 1);
