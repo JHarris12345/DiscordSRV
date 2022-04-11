@@ -83,7 +83,7 @@ public class DiscordConsoleListener extends ListenerAdapter {
         for (int i = 0; i < blacklistedCommands.size(); i++) blacklistedCommands.set(i, blacklistedCommands.get(i).toLowerCase());
 
         // JHarris changes. The requestedCommand has been changed from only the first word, to the entire command.
-        // After, instead of checking if the blacklist contains the command. We loop through the blacklisted commands
+        // After, instead of checking if the blacklist contains the command, we loop through the blacklisted commands
         // and check if the requestedCommand starts with any of the blacklisted commands
 
         /*String requestedCommand = event.getMessage().getContentRaw().trim().split(" ")[0].toLowerCase();
@@ -107,6 +107,7 @@ public class DiscordConsoleListener extends ListenerAdapter {
         }
 
         if (!doCommand) return;
+        // End of JHarris changes
 
         // log command to console log file, if this fails the command is not executed for safety reasons unless this is turned off
         File logFile = DiscordSRV.getPlugin().getLogFile();
