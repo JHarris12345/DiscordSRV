@@ -43,7 +43,7 @@
 /*
  * DiscordSRV - https://github.com/DiscordSRV/DiscordSRV
  *
- * Copyright (C) 2016 - 2022 Austin "Scarsz" Shapiro
+ * Copyright (C) 2016 - 2024 Austin "Scarsz" Shapiro
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as
@@ -128,6 +128,7 @@ public class PluginSlashCommand {
      * @return whether the guild is applicable for this command
      */
     public boolean isApplicable(Guild guild) {
+        if (guild == null) return false;
         return this.guilds.isEmpty() || this.guilds.contains(guild.getId());
     }
     /**

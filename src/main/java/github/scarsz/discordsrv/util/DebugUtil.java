@@ -43,7 +43,7 @@
 /*
  * DiscordSRV - https://github.com/DiscordSRV/DiscordSRV
  *
- * Copyright (C) 2016 - 2022 Austin "Scarsz" Shapiro
+ * Copyright (C) 2016 - 2024 Austin "Scarsz" Shapiro
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as
@@ -337,8 +337,8 @@ public class DebugUtil {
         }
 
         String consoleChannelId = DiscordSRV.config().getString("DiscordConsoleChannelId");
-        if (DiscordSRV.getPlugin().getChannels().values().stream().filter(Objects::nonNull)
-                .anyMatch(channelId -> channelId.equals(consoleChannelId))) {
+        if (consoleChannelId != null && !consoleChannelId.matches("^0*$")
+                && DiscordSRV.getPlugin().getChannels().values().stream().filter(Objects::nonNull).anyMatch(channelId -> channelId.equals(consoleChannelId))) {
             messages.add(new Message(Message.Type.CONSOLE_AND_CHAT_SAME_CHANNEL));
         }
 
@@ -537,7 +537,6 @@ public class DebugUtil {
         return String.join("\n", output);
     }
 
-
     private static String getThreads() {
         Map<Thread, StackTraceElement[]> stackTraces = Thread.getAllStackTraces();
         Set<Thread> alreadyLoggedThreads = new HashSet<>();
@@ -566,15 +565,22 @@ public class DebugUtil {
             if (alreadyLoggedThreads.add(thread)) {
                 Plugin plugin = null;
                 try {
-                    plugin = Bukkit.getScheduler().getActiveWorkers().stream()
-                            .filter(work -> work.getThread() == thread)
-                            .map(BukkitWorker::getOwner).findAny().orElse(null);
+                    plugin = SchedulerUtil.isFolia()
+                             ? null // not implemented on folia
+                             : Bukkit.getScheduler().getActiveWorkers().stream()
+                               .filter(work -> work.getThread() == thread)
+                               .map(BukkitWorker::getOwner).findAny().orElse(null);
                 } catch (Throwable ignored) {}
 
                 stringBuilder.append("- ").append(thread.getName())
                         .append(plugin != null ? " (Owned by " + plugin.getName() + ")" : "")
                         .append('\n');
             }
+        }
+
+        if (SchedulerUtil.isFolia()) {
+            stringBuilder.append("\nScheduler info is not available on Folia.");
+            return stringBuilder.toString();
         }
 
         try {

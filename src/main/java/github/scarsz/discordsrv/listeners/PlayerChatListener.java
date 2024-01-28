@@ -43,7 +43,7 @@
 /*
  * DiscordSRV - https://github.com/DiscordSRV/DiscordSRV
  *
- * Copyright (C) 2016 - 2022 Austin "Scarsz" Shapiro
+ * Copyright (C) 2016 - 2024 Austin "Scarsz" Shapiro
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as
@@ -63,7 +63,7 @@
 package github.scarsz.discordsrv.listeners;
 
 import github.scarsz.discordsrv.DiscordSRV;
-import org.bukkit.Bukkit;
+import github.scarsz.discordsrv.util.SchedulerUtil;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
@@ -79,12 +79,14 @@ public class PlayerChatListener implements Listener {
             return;
         }
 
-        Bukkit.getScheduler().runTaskAsynchronously(DiscordSRV.getPlugin(), () ->
+        String message = event.getMessage();
+        boolean isCancelled = event.isCancelled();
+        SchedulerUtil.runTaskAsynchronously(DiscordSRV.getPlugin(), () ->
                 DiscordSRV.getPlugin().processChatMessage(
                         event.getPlayer(),
-                        event.getMessage(),
+                        message,
                         DiscordSRV.getPlugin().getOptionalChannel("global"),
-                        event.isCancelled(),
+                        isCancelled,
                         event
                 )
         );

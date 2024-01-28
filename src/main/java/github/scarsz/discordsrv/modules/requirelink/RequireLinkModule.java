@@ -43,7 +43,7 @@
 /*
  * DiscordSRV - https://github.com/DiscordSRV/DiscordSRV
  *
- * Copyright (C) 2016 - 2022 Austin "Scarsz" Shapiro
+ * Copyright (C) 2016 - 2024 Austin "Scarsz" Shapiro
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as
@@ -67,6 +67,7 @@ import github.scarsz.discordsrv.Debug;
 import github.scarsz.discordsrv.DiscordSRV;
 import github.scarsz.discordsrv.util.DiscordUtil;
 import github.scarsz.discordsrv.util.MessageUtil;
+import github.scarsz.discordsrv.util.SchedulerUtil;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.Role;
@@ -264,7 +265,7 @@ public class RequireLinkModule implements Listener {
         }
 
         DiscordSRV.info("Kicking player " + player.getName() + " for unlinking their accounts");
-        Bukkit.getScheduler().runTask(DiscordSRV.getPlugin(), () -> player.kickPlayer(MessageUtil.translateLegacy(getUnlinkedKickMessage())));
+        SchedulerUtil.runTaskForPlayer(DiscordSRV.getPlugin(), player, () -> player.kickPlayer(MessageUtil.translateLegacy(getUnlinkedKickMessage())));
     }
 
     private boolean checkWhitelist() {

@@ -43,7 +43,7 @@
 /*
  * DiscordSRV - https://github.com/DiscordSRV/DiscordSRV
  *
- * Copyright (C) 2016 - 2022 Austin "Scarsz" Shapiro
+ * Copyright (C) 2016 - 2024 Austin "Scarsz" Shapiro
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as
@@ -66,6 +66,7 @@ import github.scarsz.discordsrv.DiscordSRV;
 import github.scarsz.discordsrv.util.DiscordUtil;
 import github.scarsz.discordsrv.util.LangUtil;
 import github.scarsz.discordsrv.util.MessageUtil;
+import github.scarsz.discordsrv.util.SchedulerUtil;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.User;
 import org.apache.commons.lang3.StringUtils;
@@ -89,7 +90,7 @@ public class CommandUnlink {
             permission = "discordsrv.unlink"
     )
     public static void execute(CommandSender sender, String[] args) {
-        Bukkit.getScheduler().runTaskAsynchronously(DiscordSRV.getPlugin(), () -> executeAsync(sender, args));
+        SchedulerUtil.runTaskAsynchronously(DiscordSRV.getPlugin(), () -> executeAsync(sender, args));
     }
 
     private static void executeAsync(CommandSender sender, String[] args) {
