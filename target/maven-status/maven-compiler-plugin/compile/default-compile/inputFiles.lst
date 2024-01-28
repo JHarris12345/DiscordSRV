@@ -1,4 +1,5 @@
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\hooks\world\MultiverseCoreHook.java
+D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\hooks\chat\NChatHook.java
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\util\LangUtil.java
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\commands\CommandReload.java
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\DiscordSRV.java
@@ -55,6 +56,7 @@ D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\ja
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\util\PrettyUtil.java
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\api\events\DiscordChatChannelListCommandMessageEvent.java
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\listeners\PlayerBanListener.java
+D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\util\SchedulerUtil.java
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\objects\threads\ChannelTopicUpdater.java
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\commands\CommandLanguage.java
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\api\events\DeathMessagePreProcessEvent.java
@@ -78,6 +80,7 @@ D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\ja
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\hooks\VaultHook.java
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\util\MemUtil.java
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\api\events\DeathMessagePostProcessEvent.java
+D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\objects\managers\link\file\JsonFileAccountLinkManager.java
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\api\events\DiscordGuildMessagePreBroadcastEvent.java
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\util\HttpUtil.java
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\commands\Command.java
@@ -97,10 +100,10 @@ D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\ja
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\modules\voice\VoiceModule.java
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\api\events\AchievementMessagePreProcessEvent.java
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\objects\managers\link\JdbcAccountLinkManager.java
-D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\objects\managers\link\FileAccountLinkManager.java
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\util\DiscordUtil.java
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\objects\managers\AccountLinkManager.java
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\api\events\VentureChatEvent.java
+D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\objects\managers\link\file\AppendOnlyFileAccountLinkManager.java
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\api\commands\SlashCommandPriority.java
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\modules\voice\Network.java
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\api\events\DiscordGuildMessagePostProcessEvent.java
@@ -111,6 +114,7 @@ D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\ja
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\hooks\chat\ChattyChatHook.java
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\api\events\DebugReportedEvent.java
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\api\events\DiscordEvent.java
+D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\objects\managers\link\file\AbstractFileAccountLinkManager.java
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\hooks\PluginHook.java
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\api\events\DiscordPrivateMessageReceivedEvent.java
 D:\Users\j0shu\Extra Stuff\Private\Minecraft\Java\Plugins\DiscordSRV\src\main\java\github\scarsz\discordsrv\hooks\chat\VentureChatHook.java
